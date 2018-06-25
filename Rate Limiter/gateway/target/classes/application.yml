@@ -1,0 +1,8 @@
+server:
+  port: 8080
+  
+gs-server:
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: localhost:8888 
