@@ -27,5 +27,9 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
+	<classpathentry kind="lib" path="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/jfxrt.jar"/>
+	<classpathentry kind="lib" path="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfxswt.jar"/>
+	<classpathentry kind="lib" path="/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/jfxswt.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

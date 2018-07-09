@@ -20,10 +20,13 @@ public class Application {
 	public RouteLocator myRoutes(RouteLocatorBuilder builder, ThrottleGatewayFilterFactory throttle) {
 		return builder.routes().route(r -> r.order(-1)
                 .path("/greeting")
-                .filters(f -> f.filter(throttle.apply(50,
-                        10,
-                        1,
-                        TimeUnit.SECONDS)))
+                .filters(f -> f.filter(throttle.apply(10, //bucketcapacity
+                        10, //refillTokens
+                        1, //refillTime
+                        TimeUnit.SECONDS //refillTimeUnit
+                        ,50, //requestsQueue max size 
+                        250, //waiting time for a request (in microseconds)
+                        5))) //max waiting cycles
                 .uri("http://localhost:8888")
 		).build();
 
